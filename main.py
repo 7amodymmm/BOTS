@@ -37,6 +37,7 @@ def f(message):
 		key.add(dev)
 		ur = requests.get(f"https://iqhost.xyz/tiktok/dvid/{url}").json()["video"][0]
 		bot.send_video(message.chat.id,ur,"- Done Download Video ✅",reply_to_message_id=(message.message_id),reply_markup=key)  
+
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
     json_string = request.get_data().decode("utf-8")
@@ -46,4 +47,5 @@ def redirect_message():
 
 if __name__ == "__main__":
     bot.remove_webhook()
-    bot.set_webhook(url="https://modybots.herokuapp.com"+str(BOT_TOKE
+    bot.set_webhook(url="https://modybots.herokuapp.com"+str(BOT_TOKEN))
+    server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
