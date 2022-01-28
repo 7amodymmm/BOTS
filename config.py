@@ -1,2 +1,2 @@
-BOT_TOKEN = "5260433980:AAGst0oFVuoFo6d948Is3Op-98ite-DjMj4"
-APP_URL = "https://modybots.herokuapp.com" + BOT_TOKEN
+BOT_TOKEN = "5260433980:AAFiA78ivz-e0VMADXo-J5Fq3fbkDZ5YTo4"
+APP_URL = "https://bybots.herokuapp.com" + BOT_TOKEN
